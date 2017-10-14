@@ -1,0 +1,242 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard | MARES</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+
+  <!-- Modal Structure -->
+    <div id="modal1" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4>Crear nueva tarea</h4>
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">title</i>
+                        <input id="icon_prefix" type="text" class="validate">
+                        <label for="icon_prefix">Título de la tarea</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">account_circle</i>
+                        <select class="icons">
+                          <option value="" disabled selected>Choose your option</option>
+                          <option value="" data-icon="img/sample-1.jpg" class="circle">Andres Urdaneta</option>
+                          <option value="" data-icon="img/office.jpg" class="circle">Emmanuel Villalobos</option>
+                          <option value="" data-icon="img/profile.jpg" class="circle">Jose Montero</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">mode_edit</i>
+                        <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                        <label for="icon_prefix2">Descripción de la tarea</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="file-field input-field">
+                            <div class="btn">
+                                <span>File</span>
+                                <input type="file" multiple>
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text" placeholder="Subir uno o más archivos">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="btn-flat waves-effect modal-close">Cancel</a>
+            <a href="#!" class="btn waves-effect waves-light">Guardar</a>
+        </div>
+    </div>
+    <ul id="dropdown1" class="dropdown-content">
+      <li><a href="#!" class="waves-effect">Mi perfil</a></li>
+      <li><a href="#!" class="waves-effect">Configuración</a></li>
+      <li class="divider"></li>
+      <li><a href="#!" class="waves-effect">Cerrar sesión</a></li>
+    </ul>
+    <div class="navbar-fixed">
+        <nav class="teal">
+            <div class="nav-wrapper">
+                <a href="index.html" class="brand-logo center">MARES</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    <li class="active"><a href="index.html" class="waves-effect"><i class="material-icons left">home</i> Inicio</a></li>
+                    <li><a href="marcas.html" class="waves-effect"><i class="material-icons left">business_center</i>Marcas</a></li>
+                    <li><a href="oposiciones.html" class="waves-effect"><i class="material-icons left">folder</i>Oposiciones</a></li>
+                </ul>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#" class="waves-effect"><i class="material-icons left">notifications</i><span class="new badge">3</span></a></li>
+                    <li><a class="dropdown-button waves-effect" href="#!" data-beloworigin="true" data-activates="dropdown1"><i class="large material-icons left">account_circle</i> Nombre de Usuario<i class="material-icons right">arrow_drop_down</i></a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="sass.html">Marcas</a></li>
+                    <li><a href="badges.html">Oposiciones</a></li>
+                    <li><a href="#"><i class="material-icons left">notifications</i><span class="new badge">3</span></a></li>
+                    <!-- <li><a class="dropdown-button" href="#!" data-beloworigin="true" data-activates="dropdown1">Nombre de Usuario<i class="material-icons right">arrow_drop_down</i></a></li> -->
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div>
+        <br>
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="card z-depth-2">
+                    <div class="card-image">
+                        <h4 style="margin-left: 25px; padding-top: 20px">Mis actividades</h4>
+                        <a class="btn-floating btn-large halfway-fab waves-effect waves-light teal darken-2 modal-trigger" href="#modal1"><i class="material-icons">add</i></a>
+                        <div class="divider"></div>
+                    </div>
+                    <br>
+                    <div class="card-content">
+                        <ul class="collection">
+                            <a href="#" class="collection-item active">Tarea</a>
+                            <a href="#" class="collection-item">Tarea2 </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col s10 m6">
+                <div class="card-panel z-depth-2">
+                    <h4>Vencimientos este mes</h4>
+                    <div class="row">
+                        <div class="col s12">
+                            <table class="responsive-table highlight bordered">
+                              <thead>
+                                <th></th>
+                                <th>Nombre</th>
+                                <th>Estado</th>
+                                <th>Última actualización</th>
+                                <th>Acciones</th>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td class="center"><img style="width:60px" class="circle" src="img/marcas/amovenca.jpg"></td>
+                                  <td>AMOVENCA</td>
+                                  <td><span class="badge left red white-text">Vencido</span></td>
+                                  <td>Hace 2 días</td>
+                                  <td>
+                                    <a href="#" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Ver"><i class="material-icons">visibility</i></a>
+                                    <a href="#" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Editar"><i class="material-icons">edit</i></a>
+                                    <a href="#" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Eliminar"><i class="material-icons">remove</i></a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="center"><img style="width:60px" class="circle" src="img/marcas/gemacar.png"></td>
+                                  <td>GEMACAR</td>
+                                  <td><span class="badge left white-text green">Concedido</span></td>
+                                  <td>Hace 1 semana</td>
+                                  <td>
+                                    <a href="#" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Ver"><i class="material-icons">visibility</i></a>
+                                    <a href="#" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Editar"><i class="material-icons">edit</i></a>
+                                    <a href="#" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Eliminar"><i class="material-icons">remove</i></a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-panel z-depth-2">
+                    <h4>Vencimientos próximos seis meses</h4>
+                    <div class="row">
+                        <div class="col s12">
+                            <table class="responsive-table highlight bordered">
+                              <thead>
+                                <th></th>
+                                <th>Nombre</th>
+                                <th>Estado</th>
+                                <th>Última actualización</th>
+                                <th>Acciones</th>
+                              </thead>
+                              <tbody>
+                        <tr>
+                          <td class="center"><img style="width:60px" class="circle" src="img/marcas/tuvisioncontable.png"></td>
+                          <td>Tu Vision Contable</td>
+                          <td><span class="badge left white-text amber accent-4">Solicitado</span></td>
+                          <td>Hace 1 mes</td>
+                          <td>
+                            <a href="#" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Ver"><i class="material-icons">visibility</i></a>
+                            <a href="#" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Editar"><i class="material-icons">edit</i></a>
+                            <a href="#" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Eliminar"><i class="material-icons">remove</i></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="center"><img style="width:60px" class="circle" src="img/marcas/tortalista.png"></td>
+                          <td>Torta Lista</td>
+                          <td><span class="badge left white-text green">Concedido</span></td>
+                          <td>Hace 1 día</td>
+                          <td>
+                            <a href="#" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Ver"><i class="material-icons">visibility</i></a>
+                            <a href="#" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Editar"><i class="material-icons">edit</i></a>
+                            <a href="#" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Eliminar"><i class="material-icons">remove</i></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="center"><img style="width:60px" class="circle" src="img/marcas/aseca.png"></td>
+                          <td>ASECA</td>
+                          <td><span class="badge left white-text red">Vencido</span></td>
+                          <td>Hace 45 minutos</td>
+                          <td>
+                            <a href="#" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Ver"><i class="material-icons">visibility</i></a>
+                            <a href="#" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Editar"><i class="material-icons">edit</i></a>
+                            <a href="#" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Eliminar"><i class="material-icons">remove</i></a>
+                          </td>
+                        </tr>
+                              </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  <footer class="page-footer teal">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">MARES</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt quia, totam. Iste voluptates esse hic molestias voluptate tempora deserunt repudiandae, nesciunt aut atque sit quisquam deleniti consectetur autem. Veniam, hic.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="white-text">Links</h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="#!">Inicio </a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Marcas</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Oposición</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Perfil</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+          &copy; 2017 Copyright Text
+          </div>
+        </div>
+  </footer>
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script>
+      $(document).ready(function(){
+            $(".button-collapse").sideNav();
+            $('.modal').modal();
+            $('select').material_select();
+      });
+  </script>
+</body>
+</html>
